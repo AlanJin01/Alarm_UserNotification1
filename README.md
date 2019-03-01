@@ -4,6 +4,23 @@
 
 ![image](https://github.com/Kimsswift/Alarm_UserNotification1/blob/master/Alarm_UNNotification/n00.gif)
 
+一定要在AppDelegate.swift文件中设置权限,否则会出错
+---
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        // Override point for customization after application launch.
+        UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (accept, error) in
+            if accept == false {
+                print("禁止通知")
+            }
+        }
+        
+        //删除所有已推送的通知
+        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+        
+        return true
+    }
+
+
 设定好时间时，会把相关时间发送到通知中心，以便按照设定的时间进行通知
 --------
     //视图即将显现时
