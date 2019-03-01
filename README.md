@@ -77,7 +77,7 @@
         }
     }
     
-  在VC中，以下是引用UNUserNotificationCenterDelegate中的方法
+  在VC中，引用UNUserNotificationCenterDelegate
   ------
   
         //使用UserNotification代理中的方法，该方法在应用处于前台时，也允许发送通知
