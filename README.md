@@ -76,3 +76,22 @@
             }
         }
     }
+    
+  在VC中，以下是引用UNUserNotificationCenterDelegate中的方法
+  ------
+  
+        //使用UserNotification代理中的方法，该方法在应用处于前台时，也允许发送通知
+    func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        completionHandler([.alert, .sound])
+        
+        //遍历所有已推送的通知
+        UNUserNotificationCenter.current().getDeliveredNotifications { (notifications) in
+            for n in notifications {
+                print(n)
+            }
+        }
+        
+        //删除所有已推送的通知
+    //        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
+    }
