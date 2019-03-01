@@ -91,7 +91,5 @@
                 print(n)
             }
         }
-        
-        //删除所有已推送的通知
-    //        UNUserNotificationCenter.current().removeAllDeliveredNotifications()
-    }
+     }
+      
