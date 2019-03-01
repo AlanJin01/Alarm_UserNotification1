@@ -4,7 +4,7 @@
 
 ![image](https://github.com/Kimsswift/Alarm_UserNotification1/blob/master/Alarm_UNNotification/n00.gif)
 
-设定好时间时，发送到通知中心
+设定好时间时，会把相关时间发送到通知中心，以便按照设定的时间进行通知
 --------
     //视图即将显现时
     override func viewWillAppear(_ animated: Bool) {
