@@ -7,7 +7,7 @@
 一定要在AppDelegate.swift文件中设置权限,否则会出错
 ---
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
         UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { (accept, error) in
             if accept == false {
                 print("禁止通知")
